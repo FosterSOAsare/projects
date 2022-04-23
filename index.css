@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+body {
+  background-color: #def4f4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow: scroll;
+}
+
+body h1 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+body p {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+body .container {
+  width: 60%;
+  height: auto;
+}
+
+body .container .err {
+  color: red;
+  font-size: 14px;
+  margin-top: 2px;
+  display: none;
+}
+
+body .container .form {
+  width: 100%;
+  height: 20%;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 4px solid blue;
+}
+
+body .container .form .input, body .container .form .submit {
+  border: 0;
+  outline: 0;
+  width: 80%;
+  height: 100%;
+  font-size: 28px;
+}
+
+body .container .form .input input, body .container .form .submit input {
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  font-size: 24px;
+  border: none;
+  border: px solid blue;
+  background-color: transparent;
+}
+
+body .container .form .input input:focus, body .container .form .submit input:focus {
+  outline: 0;
+}
+
+body .container .form .submit {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #25be25;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+body .container .results {
+  width: 100%;
+  height: 70%;
+  padding: 40px;
+  margin-top: 20px;
+  background-color: transparent;
+}
+
+body .container .results .table {
+  border: 2px solid black;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: none;
+  margin-bottom: 100px;
+}
+
+body .container .results .table .stem, body .container .results .table .leaf {
+  width: 20%;
+  height: auto;
+  color: #3939b1;
+  text-transform: uppercase;
+  border-right: 3px solid black;
+}
+
+body .container .results .table .stem h3, body .container .results .table .stem div, body .container .results .table .leaf h3, body .container .results .table .leaf div {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  border-bottom: 3px solid black;
+}
+
+body .container .results .table .stem div, body .container .results .table .leaf div {
+  font-size: 18px;
+}
+
+body .container .results .table .stem div:last-child, body .container .results .table .leaf div:last-child {
+  border-bottom: none;
+}
+
+body .container .results .table .stem .leaf_col, body .container .results .table .leaf .leaf_col {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0 40px;
+}
+
+body .container .results .table .leaf {
+  width: 80%;
+  color: black;
+  border: none;
+}
+
+body .container .results .table .leaf h3 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 20px;
+}
+/*# sourceMappingURL=index.css.map */

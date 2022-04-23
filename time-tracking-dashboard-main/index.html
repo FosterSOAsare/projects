@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/output.css">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+<body class="bg-primarybg w-full h-screen px-6 pt-16 xl:flex justify-center items-center">
+  <div class="container  rounded-lg pb-20 md:w-3/4 md:mx-auto xl:flex justify-between xl:w-11/12 xl:mx-auto ">
+    <div class="profile w-full  xl:w-64 h-32 bg-darkblue font-normal rounded-lg ">
+      <div class="top full h-2/3  w-full xl:h-80 rounded-lg bg-blue px-4 flex items-center xl:items-start relative xl:flex-col xl:p-8 xl:z-10">
+        <img class="w-12 xl:w-16 xl:h-16 h-12 border-2 border-white rounded-full float-left xl:float-none mr-6" src="./images/image-jeremy.png">
+        <div class="info">
+          <p class="text-sm text-white">
+            Report for
+          </p>
+          <p class="text-lg text-white mb-3 xl:text-4xl text-normal xl:mt-4 xl:leading-relaxed" >
+            Jeremy Robson
+          </p>
+        </div>
+      </div>
+      <div class="bottom flex font-bold justify-between mt-2 relative px-6 xl:bg-darkblue xl:h-44 xl:rounded-lg xl:-mt-4  xl:pt-8 xl:block">
+          <div class="toggle mb-4 text-lg">
+            <p  >Daily</p>
+          </div >
+           <div class="toggle text-desatblue mb-4 text-lg">
+            <p> Weekly</p>
+          </div>
+           <div class="toggle mb-4 text-lg">
+            <p>Monthly</p>
+          </div>
+      </div>
+    </div>
+    <div class="content-container">
+    </div>
+  </div>
+  
+  <div class="hidden">
+</div>
+  <script src="./app.js"></script>
+</body>
+</html>

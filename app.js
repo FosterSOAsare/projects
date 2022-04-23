@@ -20,6 +20,10 @@ const clearExistingCards = () => {
   card.forEach((e) => {
     output.removeChild(e);
   });
+  let text = document.querySelector(".output .text");
+  if (text != undefined) {
+    output.removeChild(text);
+  }
 };
 const createCardParagraphs = (card_bottom, paragraph_text, span_text) => {
   let paragraph_p = document.createElement("p");
@@ -110,13 +114,18 @@ const search = async (value) => {
   responseTxt.forEach((e, index) => {
     let search_options = document.querySelector(".search_options");
     search_options.style.display = "none";
-    if (e.name.toLowerCase() === value.toLowerCase()) {
+    if (e.name.toLowerCase().startsWith(value.toLowerCase())) {
       //   Creating card
       createCard(e.flag, e.name, e.population, e.region, e.capital);
       found = true;
     }
   });
   if (!found) {
+    clearExistingCards();
+    let text = document.createElement("h1");
+    text.classList.add("text");
+    text.textContent = "No country matches your search";
+    output.appendChild(text);
   }
   detailsPage(responseTxt);
 };
@@ -127,7 +136,7 @@ search_input.addEventListener("keyup", (e) => {
   if (value.length === 0) {
     search_options.style.display = "none";
     displayDefault();
-  } else {
+  } else if (value.length != 0 && window.screen.width >= 560) {
     search_options.style.display = "block";
   }
   //   Using enter key to display search
@@ -198,7 +207,6 @@ let themeSwitch = () => {
   let theme = document.querySelector("header .right_section");
   let moon = document.querySelector("header i");
   theme.addEventListener("click", () => {
-    console.log(localStorage.getItem("theme"));
     if (localStorage.getItem("theme") === "light") {
       localStorage.setItem("theme", "dark");
       moon.classList.remove("fa-regular");

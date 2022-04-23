@@ -101,7 +101,7 @@ const displayMatch = (value) => {
     });
   }
   responseTxt.forEach((e) => {
-    if (e.name.toLowerCase().startsWith(value.toLowerCase())) {
+    if (e.name.toLowerCase().startsWith(value.toLowerCase().trim())) {
       createListItems(e.name);
     }
   });
@@ -114,7 +114,7 @@ const search = async (value) => {
   responseTxt.forEach((e, index) => {
     let search_options = document.querySelector(".search_options");
     search_options.style.display = "none";
-    if (e.name.toLowerCase().startsWith(value.toLowerCase())) {
+    if (e.name.toLowerCase().startsWith(value.toLowerCase().trim())) {
       //   Creating card
       createCard(e.flag, e.name, e.population, e.region, e.capital);
       found = true;
@@ -150,7 +150,7 @@ search_input.addEventListener("keyup", (e) => {
 });
 
 // Using a click on the suggestions to display search
-const searchWithSuggestions = () => {
+var searchWithSuggestions = () => {
   let listItems = document.querySelectorAll(".search_options ul li");
   let search_input = document.querySelector(".search input");
   if (listItems.length !== 0) {
@@ -197,6 +197,10 @@ const filter = (value) => {
 if (filter_list_items.length !== 0) {
   filter_list_items.forEach((e) => {
     e.addEventListener("click", () => {
+      filter_options.style.display = "none";
+      let arrow = document.querySelector(".filter i");
+      arrow.classList.remove("fa-angle-up");
+      arrow.classList.add("fa-angle-down");
       filter(e.textContent);
     });
   });

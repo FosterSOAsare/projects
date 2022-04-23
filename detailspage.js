@@ -11,7 +11,6 @@ export default function detailsPage(data) {
       createDetailsPage(name.textContent, data);
     });
   });
-  // createDetailsPage("Belgium", data);
 }
 
 const createBorders = (value) => {
@@ -108,7 +107,8 @@ var createDetailsPage = (country, data) => {
         });
       } else {
         let borders_div = document.querySelector(".borders");
-        createBorders("There are no borders of this country");
+        let borders_border_div = document.querySelector(".borders div");
+        createBorders("No border countries");
         borders_div.style.gridTemplateColumns = "1fr";
       }
     }
@@ -130,9 +130,7 @@ back.addEventListener("click", () => {
 const borderDetails = (data) => {
   let borderCountries = document.querySelectorAll(".borders div");
   borderCountries.forEach((e) => {
-    if (
-      borderCountries[0].textContent !== "There are no borders of this country"
-    ) {
+    if (borderCountries[0].textContent !== "No border countries") {
       e.addEventListener("click", () => {
         createDetailsPage(e.textContent, data);
       });
